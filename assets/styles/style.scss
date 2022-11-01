@@ -70,6 +70,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
 
 aside {
@@ -100,7 +101,7 @@ hr {
 
 .logo {
   font-family: "Times New Roman", Times, serif;
-  font-size: 3.5em;
+  font-size: 2em;
   font-weight: 900;
   color: var(--clr-bg-dark);
 }
@@ -155,6 +156,19 @@ button {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 2.5em;
+}
+
+/*menu*/
+
+@media (max-width: 375px) {
+  .menu_close,
+  nav {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .attribution {
