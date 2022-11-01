@@ -120,12 +120,18 @@ h3 {
   color: var(--clr-bg);
   margin-bottom: 1em;
 }
+h3:hover {
+  color: var(--clr-orange);
+}
 
 h4 {
   font-size: 1.1em;
   font-variation-settings: "wght" 500;
   color: var(--clr-bg-dark);
   margin-bottom: 1.1em;
+}
+h4:hover {
+  color: var(--clr-orange);
 }
 
 .number {
@@ -147,6 +153,9 @@ button {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 2.5em;
+}
+button:hover {
+  background-color: var(--clr-bg-dark);
 }
 
 /*menu*/
