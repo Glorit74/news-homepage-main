@@ -108,7 +108,8 @@ hr {
 
 h1 {
   font-size: 3em;
-  font-variation-settings: "wght" 900;
+  //   font-variation-settings: "wght" 900;
+  font-weight: 800;
   line-height: 0.95em;
   color: var(--clr-bg-dark);
   margin: 0.5em 0 0.2em;
@@ -159,6 +160,7 @@ button {
   background-color: var(--clr-red);
   color: var(--clr-bg);
   font-size: 1em;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 2.5em;
@@ -170,13 +172,53 @@ button {
 /*menu*/
 
 @media (max-width: 375px) {
-  .menu_close,
-  nav {
-    display: none;
+  .primary-navigation {
+    position: fixed;
+    z-index: 100;
+    inset: 0 0 0 30%;
+
+    background-color: var(--clr-bg);
+
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+
+    transform: translateX(0%);
+
+    li {
+      margin-bottom: 1.5em;
+      font-size: 1.1em;
+      font-weight: 700;
+    }
   }
-  .menu {
+
+  .primary-navigation[data-visible="false"] {
+    transform: translateX(100%);
+  }
+
+  .hamburger {
     display: flex;
     align-items: center;
+    z-index: 150;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .hamburger[data-visible="false"] {
+    display: none;
+  }
+
+  .menu_close {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 1.2em;
+    right: 1.2em;
+  }
+
+  .menu_close[data-visible="false"] {
+    display: none;
   }
 }
 

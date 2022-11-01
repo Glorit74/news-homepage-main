@@ -11,25 +11,27 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="script.js"></script>
 
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
     <header>
       <div class="logo">W.</div>
-      <div class="menu">
+      <div id="hamburger" class="hamburger"  data-visible="true">
         <img src="./assets/images/icon-menu.svg" alt="hamburger-menu"
+       >
       </div>
-      <nav>
-        <div class="menu_close">
+      <nav class="primary-navigation" data-visible="false">
+        <div class="menu_close" data-visible="false">
           <img src="./assets/images/icon-menu-close.svg" alt="icon-menu" />
         </div>
-        <ul>
-          <li>Home</li>
-          <li>New</li>
-          <li>Popular</li>
-          <li>Trending</li>
-          <li>Categories</li>
+        <ul  mobile-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">New</a></li>
+          <li><a href="">Popular</a></li>
+          <li><a href="">Trending</a></li>
+          <li><a href="">Categories</a></li>
         </ul>
       </nav>
     </header>

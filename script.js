@@ -1,13 +1,25 @@
 function loadEvent() {
   const primaryNav = document.querySelector(".primary-navigation");
 
-  const navToggle = document.querySelector(".hamburger");
+  const hamburger = document.querySelector(".hamburger");
 
-  navToggle.addEventListener("click", () => {
-    const visibility = primaryNav.getAttribute("data-visible");
-    if (visibility === "false") {
+  const close = document.querySelector(".menu_close");
+
+  const visibilityNav = primaryNav.getAttribute("data-visible");
+  const visibilityClose = close.getAttribute("data-visible");
+  const visibilityHamburger = hamburger.getAttribute("data-visible");
+
+  hamburger.addEventListener("click", () => {
+    if (visibilityNav === "false") {
       primaryNav.setAttribute("data-visible", true);
-    } else primaryNav.setAttribute("data-visible", false);
+      close.setAttribute("data-visible", true);
+      hamburger.setAttribute("data-visible", false);
+    }
+  });
+  close.addEventListener("click", () => {
+    primaryNav.setAttribute("data-visible", false);
+    close.setAttribute("data-visible", false);
+    hamburger.setAttribute("data-visible", true);
   });
 }
 window.addEventListener("load", loadEvent);
