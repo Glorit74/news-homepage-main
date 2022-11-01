@@ -195,8 +195,22 @@ button {
     }
   }
 
+  .primary-navigation::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: -50%;
+    background-color: gray;
+    opacity: 0.3;
+  }
+
   .primary-navigation[data-visible="false"] {
     transform: translateX(100%);
+    &::before {
+      width: 0%;
+    }
   }
 
   .hamburger {
