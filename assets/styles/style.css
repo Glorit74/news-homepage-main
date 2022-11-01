@@ -175,6 +175,9 @@ button:hover {
     font-size: 1.1em;
     font-weight: 700;
   }
+  .primary-navigation li a:hover {
+    color: var(--clr-orange);
+  }
   .primary-navigation[data-visible=false] {
     transform: translateX(100%);
   }

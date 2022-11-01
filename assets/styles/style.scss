@@ -188,6 +188,10 @@ button {
       margin-bottom: 1.5em;
       font-size: 1.1em;
       font-weight: 700;
+
+      a:hover {
+        color: var(--clr-orange);
+      }
     }
   }
 
