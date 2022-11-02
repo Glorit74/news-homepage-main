@@ -44,7 +44,6 @@ a {
 @font-face {
   font-family: Inter;
   src: url(../assets/fonts/Inter-VariableFont_slntwght.ttf) format("ttf");
-  font-weight: 900;
 }
 body {
   position: relative;
@@ -160,7 +159,7 @@ button:hover {
 }
 
 /*menu*/
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .primary-navigation {
     position: fixed;
     z-index: 100;
@@ -220,9 +219,36 @@ button:hover {
     display: none;
   }
 }
-@media screen and (min-width: 1440px) {
+@media (min-width: 501px) and (max-width: 1439px) {
   body {
-    padding-inline: 8em;
+    padding-inline: 10%;
+  }
+  .hamburger,
+.menu_close {
+    display: none;
+  }
+  .mobile-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+  .mobile-navigation a {
+    font-size: 1.2em;
+  }
+  .mobile-navigation a:hover {
+    color: var(--clr-orange);
+  }
+  h1 {
+    line-height: 1.1em;
+  }
+  .down {
+    padding-inline: 10%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    padding-inline: 10%;
   }
   logo {
     font-size: 3em;
@@ -280,6 +306,7 @@ button:hover {
     flex-direction: row;
     gap: 1rem;
     flex: 1;
+    padding: 0;
   }
   .down .wrapper {
     height: 120px;
