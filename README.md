@@ -14,7 +14,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -24,24 +23,25 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 Users should be able to:
 
-- View the optimal layout for the interface depending on their device's screen size
+- View the optimal layout for the interface depending on their device's screen size (mobile: 375px; desktop: 1440px)
 - See hover and focus states for all interactive elements on the page
-- **Bonus**: Toggle the mobile menu (requires some JavaScript)
+- **Bonus**: Toggle the mobile menu
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./assets/images/screenshot_desctop.jpg)
+![](./assets/images/screenshot_mobile.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/Glorit74/news-homepage-main](https://github.com/Glorit74/news-homepage-main)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
-## What I learned
+## What I tried to learn
 
-You can limit the request to just the character you need by using a text URL variable:
+I can limit the request to just the character I need by using a text URL variable (Later I noticed that, this was not necessary):
 
 ```html
 <link
@@ -50,10 +50,22 @@ You can limit the request to just the character you need by using a text URL var
 />
 ```
 
-````css
-.logo {
-	font-family:
+Variable font:
+
+```css
+@font-face {
+  font-family: InterRegular;
+  src: url(./assets/fonts/static/Inter-Regular.ttf);
 }
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Inter";
+    src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf);
+    font-weight: 400 900;
+  }
+}
+```
 
 ### Built with
 
@@ -62,43 +74,11 @@ You can limit the request to just the character you need by using a text URL var
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-````
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- [Sass](https://sass-lang.com/) - For styles
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In Firefox variable font doesn't work
 
 ### Useful resources
 
@@ -109,11 +89,3 @@ These helped me understand variable font usage:
 ## Author
 
 - Frontend Mentor - [@Glorit74](https://www.frontendmentor.io/profile/Glorit74)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
