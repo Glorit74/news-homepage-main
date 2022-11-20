@@ -92,18 +92,17 @@ header {
 }
 
 aside {
+  display: grid;
   padding: 1em;
   margin-bottom: 3em;
   background-color: var(--clr-bg-dark);
   p {
     color: var(--clr-text);
   }
-}
-
-hr {
-  width: 100%;
-  border: 1px solid var(--clr-text);
-  margin-bottom: 1.5em;
+  p:not(:last-child) {
+    border-bottom: 3px solid var(--clr-text);
+    padding-bottom: 1.5em;
+  }
 }
 
 .wrapper {
