@@ -84,12 +84,16 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+.logo {
+  width: 50px;
 }
 
 aside {
   padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   background-color: var(--clr-bg-dark);
   p {
     color: var(--clr-text);
@@ -108,7 +112,7 @@ hr {
   grid-template-columns: 1fr 2fr;
   gap: 1em;
   img {
-    aspect-ratio: 1 / 1;
+    // aspect-ratio: 1 / 1;
     object-fit: cover;
   }
 }
@@ -116,7 +120,7 @@ hr {
 /*typography*/
 
 h1 {
-  font-family: "InterExtraBold", sans-serif;
+  font-family: Inter, InterExtraBold, sans-serif;
   font-size: 3em;
   font-weight: 900;
   line-height: 0.95em;
@@ -126,12 +130,13 @@ h1 {
 
 h2,
 .number {
-  font-size: 1.8em;
+  font-size: 2.1em;
   font-weight: 700;
   //   font-variation-settings: "wght" 700;
+}
+h2 {
   color: var(--clr-orange);
-
-  margin-bottom: 1.1em;
+  margin: 0.9em 0;
 }
 
 h3 {
@@ -156,7 +161,7 @@ h4 {
 }
 
 .number {
-  color: var(--clr-text-dark);
+  color: var(--clr-text);
   margin-bottom: 0.25em;
 }
 
@@ -182,7 +187,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: 2.5em;
+  margin-bottom: 3.5em;
   &:hover {
     background-color: var(--clr-bg-dark);
   }
@@ -190,7 +195,7 @@ button {
 
 /*menu*/
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .primary-navigation {
     position: fixed;
     z-index: 100;
@@ -264,7 +269,7 @@ button {
   }
 }
 
-@media (min-width: 501px) and (max-width: 1439px) {
+@media (min-width: 601px) and (max-width: 1439px) {
   body {
     padding-inline: 10%;
   }
