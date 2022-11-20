@@ -59,7 +59,7 @@ a {
 
 @supports (font-variation-settings: normal) {
   @font-face {
-    font-family: Inter;
+    font-family: "Inter";
     src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf);
     font-weight: 400 900;
   }
@@ -73,7 +73,7 @@ body {
 
   padding: 1em 1em 3em;
 
-  font-family: Inter, sans-serif;
+  font-family: Inter, InterRegular, sans-serif;
   font-size: 15px;
   background-color: var(--clr-bg);
   color: var(--clr-text-dark);
@@ -115,13 +115,6 @@ hr {
 
 /*typography*/
 
-.logo {
-  font-family: "Abril Fatface", cursive;
-  font-size: 2em;
-  font-weight: 900;
-  color: var(--clr-bg-dark);
-}
-
 h1 {
   font-family: "InterExtraBold", sans-serif;
   font-size: 3em;
@@ -143,8 +136,8 @@ h2,
 
 h3 {
   font-size: 1.1em;
-  //   font-variation-settings: "wght" 500;
   font-weight: 550;
+  //   font-variation-settings: "wght" 500;
   color: var(--clr-bg);
   margin-bottom: 1em;
   &:hover {
@@ -302,9 +295,7 @@ button {
   body {
     padding-inline: 10%;
   }
-  logo {
-    font-size: 3em;
-  }
+
   header {
     padding-top: 1em;
   }
